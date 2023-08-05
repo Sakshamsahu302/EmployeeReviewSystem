@@ -26,6 +26,8 @@ app.use(express.static('./assets'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+app.listen(process.env.PORT || port, () => console.log('Listening on port ${port}'))
+
 app.use(expressLayout);
 
 // It creates a session cookie and stores it in the browser and
